@@ -1,0 +1,13 @@
+.about-page {
+    margin: 0 10%;
+    color: #484848;
+}
+
+.about-page .page-title {
+    margin-top: 3rem;
+}
+
+.about-page p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}

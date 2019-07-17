@@ -1,0 +1,37 @@
+.pets-page {
+    color: #444;
+}
+
+.pets-page .page-title {
+    margin: 1rem 2rem;
+}
+
+.pet-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pet-container {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    max-width: 400px;
+    border: 1px solid #444;
+    margin: 1rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.pet-container img {
+    width: 320px;
+}
+
+.pet-container p {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+}
