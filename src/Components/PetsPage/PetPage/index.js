@@ -6,5 +6,5 @@ const PetPage = () => {
         <div className="pet-page"
             style={style}>Pet Page</div>
     )
-}
+};
 export default PetPage

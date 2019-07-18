@@ -1,6 +1,6 @@
 import React from "react";
 import { HomePage, PetsPage, PetPage, AboutPage } from "./Components";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -16,8 +16,9 @@ function App() {
 
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
-            <Route path="/pets" component={PetsPage} />
+            <Route exact path="/pets" component={PetsPage} />
             <Route path="/pets/:id" component={PetPage} />
+            <Route render={() => <Redirect to="/" />} />
         </Router>
     )
 }
