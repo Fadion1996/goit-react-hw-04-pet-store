@@ -6,7 +6,7 @@
     color: #444;
 }
 
-.pet-page .page-return {
+.page-return {
     width: 6rem;
     height: 3rem;
     margin: 1rem;
@@ -15,22 +15,22 @@
     font-size: 1.2rem;
 }
 
-.pet-page .page-title {
+.page-title {
     margin-left: 1rem;
 
 }
 
-.pet-page .pet-content {
+.pet-content {
     margin: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.pet-page .pet-content .pet-params p {
+.pet-params {
     padding: .6rem;
 }
-.pet-page .pet-content .pet-image {
+.pet-image {
     width: 300px;
     height: 300px;
     background-size: cover;
@@ -38,6 +38,6 @@
     object-fit: cover;
 }
 
-.pet-page .pet-content .pet-description {
+.pet-description {
     margin-top: 1rem;
 }

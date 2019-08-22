@@ -1,30 +1,31 @@
 import React from 'react';
-import './pets-page.css';
-import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
+import styles from './pets-page.module.css';
 import petsStore from './../../data/pets.json'
 
-const PetsPage = () => {
+
+const PetsPage = withRouter(({history}) => {
+
+    const linkTo = (id) => history.push(`/pets/${id}`);
 
     return (
-        <div className="pets-page">
-            <h2 className="page-title">Available pets</h2>
-            <ul className="pet-list">
+        <div className={styles["pets-page"]}>
+            <h2 className={styles["page-title"]}>Available pets</h2>
+            <ul className={styles["pet-list"]}>
                 {
                     petsStore.map((pet) => {
                         const {id, image, name} = pet;
                         return(
-                            <Link to={'/pets/' + id} key={id}>
-                                <li className="pet-container">
-                                    <img src={image} alt={name}/>
-                                    <p>{name}</p>
-                                </li>
-                            </Link>
+                            <li onClick={() => linkTo(id)} key={id} className={styles["pet-container"]}>
+                                <img className={styles["pet-image"]} src={image} alt={name}/>
+                                <p className={styles["pet-name"]}>{name}</p>
+                            </li>
                         )
                     })
                 }
             </ul>
         </div>
     )
-}
+});
 export default PetsPage
